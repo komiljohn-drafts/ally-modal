@@ -6,9 +6,22 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --button-primary-bg_hover: #6941c6;
+  --button-primary-bg: #7f56d9;
+  --bg-disabled: #f2f4f7;
+  --fg-disabled: #98a2b3;
+  --border-disabled_subtle: #e4e7ec;
+  --text-secondary-700: #344054;
+  --button-secondary-border: #d0d5dd;
+  --button-secondary-bg_hover: #f9fafb;
+  --button-shadow-ring: #9e77ed;
+  --text-primary-900: #101828;
+  --text-primary-600: #475467;
+  --text-placeholder: #667085;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -18,12 +31,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background-color: #555861; */
 }
 
 @layer utilities {

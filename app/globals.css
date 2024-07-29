@@ -12,13 +12,19 @@
   --bg-disabled: #f2f4f7;
   --fg-disabled: #98a2b3;
   --border-disabled_subtle: #e4e7ec;
-  --text-secondary-700: #344054;
   --button-secondary-border: #d0d5dd;
   --button-secondary-bg_hover: #f9fafb;
   --button-shadow-ring: #9e77ed;
-  --text-primary-900: #101828;
-  --text-primary-600: #475467;
+  --primary-900: #101828;
+  --secondary-700: #344054;
+  --tertiary-600: #475467;
   --text-placeholder: #667085;
+  --icon-border: #e4e7ec;
+
+  --icon-bottom-shadow: 0px -1px 0px 0px #1018280d inset;
+  --icons-rounded-shadow: 0px 0px 0px 23px white, 0px 0px 0px 24px #ff000039, 0px 0px 0px 48px white,
+    0px 0px 0px 49px #ff000039, 0px 0px 0px 73px white, 0px 0px 0px 74px #ff000039, 0px 0px 0px 98px white,
+    0px 0px 0px 99px #ff000039, 0px 0px 0px 123px white, 0px 0px 0px 124px #ff000039;
 }
 
 @media (prefers-color-scheme: light) {
@@ -32,6 +38,8 @@
 body {
   color: rgb(var(--foreground-rgb));
   /* background-color: #555861; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {

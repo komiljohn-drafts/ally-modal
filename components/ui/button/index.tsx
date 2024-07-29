@@ -1,10 +1,11 @@
 "use client";
 
+import "./style.css";
+
 import React, { ReactNode } from "react";
 import { Button, ButtonProps } from "react-aria-components";
-import { SpinnerSvg } from "@/public/icons";
 
-import "./style.css";
+import { SpinnerSvg } from "@/public/icons";
 
 export default function AriaButton({
   className,
@@ -17,17 +18,11 @@ export default function AriaButton({
   ...props
 }: Props) {
   return (
-    <Button
-      data-variant={variant}
-      isDisabled={isDisabled || isLoading}
-      onPress={() => console.log("Hello world!")}
-      className={`button ${className}`}
-      {...props}
-    >
+    <Button data-variant={variant} isDisabled={isDisabled || isLoading} className={`button ${className}`} {...props}>
       {isLoading && <SpinnerSvg className="animate-spin size-[22px]" />}
-      {leftIcon}
+      {variant !== "ghost" && leftIcon}
       <>{children}</>
-      {rightIcon}
+      {variant !== "ghost" && rightIcon}
     </Button>
   );
 }
@@ -40,4 +35,4 @@ interface Props extends ButtonProps {
   variant?: ButtonVariants;
 }
 
-export type ButtonVariants = "primary" | "outlined" | "tertiary" | "danger";
+export type ButtonVariants = "primary" | "outlined" | "ghost" | "danger";

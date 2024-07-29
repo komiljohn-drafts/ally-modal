@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
+  justify-content: center;
 
   &[data-focused] {
     outline: none;
@@ -36,8 +38,8 @@
   &[data-variant="outlined"] {
     box-shadow: 0px -1px 0px 0px #f3f3f4 inset;
     background-color: #fff;
-    color: var(--text-secondary-700);
-    stroke: var(--text-secondary-700);
+    color: var(--secondary-700);
+    stroke: var(--secondary-700);
     padding: 5px 11px;
     border-radius: 6px;
     font-weight: 600;
@@ -52,7 +54,21 @@
       color: var(--fg-disabled);
       stroke: var(--fg-disabled);
       border: 1px solid var(--border-disabled_subtle);
-      box-shadow: 0px 1px 2px 0px #1018280d, 0px 0px 0px 0px #fff inset;
+      box-shadow:
+        0px 1px 2px 0px #1018280d,
+        0px 0px 0px 0px #fff inset;
+    }
+  }
+
+  &[data-variant="ghost"] {
+    padding: 8px;
+    border-radius: 6px;
+    stroke: var(--tertiary-600);
+    &[data-hovered] {
+      background-color: var(--button-secondary-bg_hover);
+    }
+    &[data-disabled] {
+      stroke: var(--fg-disabled);
     }
   }
 }

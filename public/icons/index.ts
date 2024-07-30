@@ -1,6 +1,7 @@
-import SaveIcon from "./save.svg";
-import SpinnerSvg from "./spinner.svg";
 import CloseSvg from "./close.svg";
 import FlagSvg from "./flag.svg";
+import InfoSvg from "./info.svg";
+import SaveIcon from "./save.svg";
+import SpinnerSvg from "./spinner.svg";
 
-export { SaveIcon, SpinnerSvg, CloseSvg, FlagSvg };
+export { CloseSvg, FlagSvg, InfoSvg, SaveIcon, SpinnerSvg };

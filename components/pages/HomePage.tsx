@@ -2,10 +2,11 @@
 
 import React from "react";
 
-import ExperienceModal from "@/components/pages/ExperienceModal";
 import AriaButton from "@/components/ui/button";
 import { useModalStore } from "@/store/useModalStore";
 import { Modals } from "@/utils/modals";
+
+import ExperienceModal from "./ExperienceModal";
 
 export default function HomePage() {
   const { setActiveModal } = useModalStore();

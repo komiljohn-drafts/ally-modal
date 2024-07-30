@@ -18,7 +18,12 @@ export default function AriaButton({
   ...props
 }: Props) {
   return (
-    <Button data-variant={variant} isDisabled={isDisabled || isLoading} className={`button ${className}`} {...props}>
+    <Button
+      data-variant={variant}
+      isDisabled={isDisabled || isLoading}
+      className={`react-aria-Button ${className}`}
+      {...props}
+    >
       {isLoading && <SpinnerSvg className="animate-spin size-[22px]" />}
       {variant !== "ghost" && leftIcon}
       <>{children}</>

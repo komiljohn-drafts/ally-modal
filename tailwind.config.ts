@@ -23,6 +23,10 @@ const config: Config = {
         "button-secondary-bg_hover": "var(--button-secondary-bg_hover)",
         "button-shadow-ring": "var(--button-shadow-ring)",
         "icon-border": "var(--icon-border)",
+        "error-primary-600": "var(--error-primary-600)",
+        "border-error_subtle": "var(--border-error_subtle)",
+        "border-error": "var(--border-error)",
+        "brand-tertiary-600": "var(--brand-tertiary-600)",
       },
       boxShadow: {
         "icon-bottom-shadow": "var(--icon-bottom-shadow)",

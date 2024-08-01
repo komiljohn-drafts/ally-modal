@@ -6,9 +6,9 @@ import { FlagSvg, RoundedLinesBgSvg, SaveIcon } from "@/public/icons";
 import { useModalStore } from "@/store/useModalStore";
 import { Modals } from "@/utils/modals";
 
-import AriaButton from "../ui/button";
+import AriaButton from "../ui/aria-button";
+import AriaModal from "../ui/aria-modal";
 import EmblaCarousel from "../ui/carousel";
-import AriaModal from "../ui/modal";
 import { SimpleText } from "../ui/typography";
 import ExperienceModalFormElements from "./ExperienceModalFormElements";
 import ExperienceModalFormWrapper from "./ExperienceModalFormWrapper";

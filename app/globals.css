@@ -39,8 +39,8 @@
 }
 
 body {
+  position: relative;
   color: rgb(var(--foreground-rgb));
-  /* background-color: #555861; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import AriaButton from "@/components/ui/button";
+import AriaButton from "@/components/ui/aria-button";
 import { useModalStore } from "@/store/useModalStore";
 import { Modals } from "@/utils/modals";
 

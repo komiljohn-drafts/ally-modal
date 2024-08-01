@@ -5,9 +5,10 @@ import "./style.css";
 import React, { ReactNode } from "react";
 import { Dialog, Modal, ModalOverlayProps } from "react-aria-components";
 
+import { useBodyOverflow } from "@/hooks/useBodyOverflow";
 import { CloseSvg } from "@/public/icons";
 
-import AriaButton from "../button";
+import AriaButton from "../aria-button";
 
 interface Props extends ModalOverlayProps {
   isOpen: boolean;
@@ -16,10 +17,12 @@ interface Props extends ModalOverlayProps {
 }
 
 export default function AriaModal({ isOpen, onClose, children }: Props) {
+  useBodyOverflow({ isOpen });
+
   return (
     <Modal
       isDismissable
-      className="relative w-[640px] bg-white rounded-xl outline-none overflow-hidden"
+      className="relative w-[640px] max-h-[90%] bg-white rounded-xl outline-none overflow-auto"
       isOpen={isOpen}
       onOpenChange={onClose}
     >

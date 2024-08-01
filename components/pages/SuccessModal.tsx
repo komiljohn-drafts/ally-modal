@@ -3,8 +3,8 @@ import React from "react";
 import { useModalStore } from "@/store/useModalStore";
 import { Modals } from "@/utils/modals";
 
+import AriaModal from "../ui/aria-modal";
 import LottieAnimation from "../ui/lottie-animation";
-import AriaModal from "../ui/modal";
 import { SimpleText } from "../ui/typography";
 
 export default function SuccessModal() {

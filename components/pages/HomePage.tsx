@@ -13,7 +13,7 @@ export default function HomePage() {
   const { setActiveModal } = useModalStore();
 
   return (
-    <main className="w-screen h-screen flex items-center justify-center px-4">
+    <main className="w-screen md:h-screen h-dvh flex items-center justify-center px-4">
       <AriaButton onPress={() => setActiveModal(Modals.EXPERIENCE_MODAL)}>Open super modal</AriaButton>
       <ExperienceModal />
       <SuccessModal />

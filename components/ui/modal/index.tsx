@@ -18,11 +18,16 @@ interface Props extends ModalOverlayProps {
 export default function AriaModal({ isOpen, onClose, children }: Props) {
   return (
     <Modal
+      isDismissable
       className="relative w-[640px] bg-white rounded-xl outline-none overflow-hidden"
       isOpen={isOpen}
       onOpenChange={onClose}
     >
-      <AriaButton variant="ghost" onPress={onClose} className="absolute top-[26px] right-[26px] !stroke-fg-disabled">
+      <AriaButton
+        variant="ghost"
+        onPress={onClose}
+        className="absolute md:top-[26px] md:right-[26px] top-4 right-4 !stroke-fg-disabled z-20"
+      >
         <CloseSvg />
       </AriaButton>
       <Dialog className="outline-none">{children}</Dialog>

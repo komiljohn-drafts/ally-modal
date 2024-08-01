@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   z-index: 100;
+  padding: 0 16px;
 
   &[data-entering] {
     animation: modal-fade 200ms;

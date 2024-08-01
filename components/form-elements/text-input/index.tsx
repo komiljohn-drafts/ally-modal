@@ -1,15 +1,14 @@
 import "./style.css";
 
 import React from "react";
-import { FieldError, Input, Label, TextField, TextFieldProps } from "react-aria-components";
+import { FieldError, Input, Label, TextArea, TextField, TextFieldProps } from "react-aria-components";
 import { Controller, useFormContext } from "react-hook-form";
+import { twMerge } from "tailwind-merge";
 
 import { InfoSvg } from "@/public/icons";
 
-interface FormTextInputProps extends TextFieldProps {
-  label?: string;
+interface FormTextInputProps extends TextInputProps {
   name: string;
-  description?: string;
 }
 
 export function FormTextInput({ name, ...props }: FormTextInputProps) {
@@ -24,22 +23,27 @@ export function FormTextInput({ name, ...props }: FormTextInputProps) {
   );
 }
 
-interface TextInputProps {
+interface TextInputProps extends TextFieldProps {
   label?: string;
   description?: string;
   error?: string;
+  placeholder?: string;
+  type?: "multiline";
 }
 
-export function TextInput({ label, error, ...props }: TextInputProps) {
+export function TextInput({ label, error, placeholder, type, isRequired, ...props }: TextInputProps) {
   return (
     <TextField isInvalid={!!error} {...props}>
       {label && (
         <Label>
-          {label} <span>*</span>
+          {label} {isRequired && <span>*</span>}
         </Label>
       )}
-      <Input placeholder="What is your title?" />
-      {error && <InfoSvg />}
+      {/* relative adds weird 5-6px of space to the bottom when it's textarea inside, so, I made a workaround by setting negative margin */}
+      <div className={twMerge("relative", type === "multiline" && "-mb-1.5")}>
+        {type === "multiline" ? <TextArea rows={4} placeholder={placeholder} /> : <Input placeholder={placeholder} />}
+        {error && <InfoSvg />}
+      </div>
       <FieldError>{error}</FieldError>
     </TextField>
   );

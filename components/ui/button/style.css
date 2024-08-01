@@ -18,13 +18,18 @@
   }
 
   &[data-variant="primary"] {
-    box-shadow: 0px 1px 2px 0px #1018280d;
     background-color: var(--button-primary-bg);
     color: #fff;
     stroke: #fff;
-    padding: 9px 12px;
+    padding: 10px 18px;
     border-radius: 6px;
     font-weight: 600;
+
+    box-shadow:
+      0px 0px 2px 0px #1018280d,
+      0px -1px 0px 0px #6749b2 inset,
+      0px 0px 0px 1px #8e6ade inset;
+
     &[data-hovered] {
       background-color: var(--button-primary-bg_hover);
     }
@@ -32,7 +37,7 @@
       background-color: var(--bg-disabled);
       color: var(--fg-disabled);
       stroke: var(--fg-disabled);
-      border: 1px solid var(--border-disabled_subtle);
+      border: 1px solid var(--border-secondary);
     }
   }
 
@@ -41,7 +46,7 @@
     background-color: #fff;
     color: var(--secondary-700);
     stroke: var(--secondary-700);
-    padding: 9px 11px;
+    padding: 10px 18px;
     border-radius: 6px;
     font-weight: 600;
     border: 1px solid var(--button-secondary-border);
@@ -54,7 +59,7 @@
       background-color: #fff;
       color: var(--fg-disabled);
       stroke: var(--fg-disabled);
-      border: 1px solid var(--border-disabled_subtle);
+      border: 1px solid var(--border-secondary);
       box-shadow:
         0px 1px 2px 0px #1018280d,
         0px 0px 0px 0px #fff inset;
@@ -70,6 +75,15 @@
     }
     &[data-disabled] {
       stroke: var(--fg-disabled);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .react-aria-Button {
+    &[data-variant="primary"],
+    &[data-variant="outlined"] {
+      padding: 8px 14px;
     }
   }
 }
